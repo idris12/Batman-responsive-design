@@ -1,0 +1,196 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: url("https://cdn.pixabay.com/photo/2015/03/26/10/24/birds-691274_1280.jpg") no-repeat center center
+		fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+#overlay {
+	background: rgba(0, 0, 0, 0.9);
+	width: 80%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	display: flex;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#overlay ul {
+	list-style: none;
+	color: #f65656;
+	display: flex;
+	flex-direction: column;
+}
+
+#overlay li {
+	padding-top: 60px;
+	font-size: 3rem;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/*Hamburger button */
+#nav-toggle {
+	cursor: pointer;
+	padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+	cursor: pointer;
+	border-radius: 1px;
+	height: 5px;
+	width: 35px;
+	background: white;
+	position: absolute;
+	display: block;
+	content: '';
+}
+#nav-toggle span:before {
+	top: -10px;
+}
+#nav-toggle span:after {
+	bottom: -10px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+	transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+	background-color: transparent;
+}
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+	top: 0;
+}
+#nav-toggle.active span:before {
+	transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+	transform: rotate(-45deg);
+}
+
+/*-----------------------------------------*/
+
+header {
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+header div img {
+	width: 56px;
+	margin-top: 5px;
+}
+
+header ul {
+	display: none;
+}
+
+/** first section */
+
+#batman-mainimg__section {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#batman-mainimg__section img {
+	width: 60%;
+}
+
+#batman-mainimg__section h1 {
+	font-size: 2.5rem;
+	color: white;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#batman-mainimg__section p {
+	color: white;
+	font-size: 1.2rem;
+	text-align: center;
+	width: 90%;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* ---------------------- Image List   ___________________ */
+#batman-img__lists {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.img-list {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.img-list img {
+	width: 60%;
+}
+
+/* ---------------------- Footer   ___________________ */
+footer {
+	position: absolute;
+	bottom: -3;
+	width: 100%;
+	background: black;
+	color: white;
+	margin-top: 20px;
+}
+
+footer p {
+	text-align: center;
+}
+
+/*--------------------------- laptop media query  _________*/
+@media (min-width: 59rem) {
+	#nav-toggle {
+		cursor: pointer;
+		padding: 10px 35px 16px 0px;
+		display: none;
+	}
+
+	header div img {
+		width: 70px;
+		margin-top: 5px;
+	}
+
+	header ul {
+		display: block;
+		color: white;
+		display: flex;
+		list-style: none;
+	}
+
+	header ul li {
+		padding: 0 15px;
+		font-size: 1.2rem;
+		color: #f65656;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	}
+
+	#batman-img__lists {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.img-list {
+		display: flex;
+		justify-content: center;
+	}
+}
